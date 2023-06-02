@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --VerydarkblueMain: hsl(217, 54%, 11%); /* (main BG)*/
+  --VerydarkblueCard: hsl(216, 50%, 16%); /*(card BG)*/
+  --VerydarkblueLine: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif; /*300, 400, 600*/
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main__container {
+  height: 100vh;
+  padding: 1.5rem;
+  display: grid;
+  place-content: center;
+  background-color: var(--VerydarkblueMain);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--VerydarkblueCard);
+  border-radius: 10px;
+  max-width: 380px;
+}
+
+.card__figure {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card__figure div {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.366);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card__figure:hover div {
+  opacity: 1;
+}
+
+.card__article--info h1 {
+  cursor: pointer;
+  color: var(--White);
+  margin-bottom: 1rem;
+  transition: color 0.5s;
+}
+
+.card__article--info h1:hover {
+  color: var(--Cyan);
+}
+
+.card__article--info p {
+  color: var(--Softblue);
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card__article--data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__article--data div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__article--data div:first-child span {
+  color: var(--Cyan);
+}
+
+.card__article--data div:last-child span {
+  color: var(--Softblue);
+}
+
+.card__footer--figure {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card__footer--figure img {
+  max-width: 30px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.card__footer--figure figcaption {
+  color: var(--Softblue);
+}
+
+.card__footer--figure figcaption span {
+  cursor: pointer;
+  color: var(--White);
+  transition: color 0.5s;
+}
+
+.card__footer--figure figcaption span:hover {
+  color: var(--Cyan);
+}
+
+hr {
+  border: none;
+  color: var(--VerydarkblueLine);
+  background-color: var(--VerydarkblueLine);
+  height: 1px;
+}
+
+.attribution {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.attribution p {
+  color: var(--Softblue);
+  font-size: 1rem;
+}
+
+.attribution a {
+  color: var(--White);
+  transition: color 0.5s;
+}
+
+.attribution a:hover {
+  color: var(--Cyan);
+}
