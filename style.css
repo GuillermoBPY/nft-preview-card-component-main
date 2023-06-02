@@ -45,7 +45,7 @@ a {
   padding: 1.5rem;
   background-color: var(--VerydarkblueCard);
   border-radius: 10px;
-  max-width: 380px;
+  max-width: 350px;
 }
 
 .card__figure {
@@ -146,7 +146,7 @@ hr {
 
 .attribution {
   text-align: center;
-  margin: 2rem 0 1rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .attribution p {
